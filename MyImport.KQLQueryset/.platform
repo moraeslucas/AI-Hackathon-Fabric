@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "KQLQueryset",
+    "displayName": "MyImport",
+    "description": "MyImport"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "7391dc76-65bd-4dba-a572-981d51076077"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "KQLQueryset",
+    "displayName": "MyStockAnalytics_queryset",
+    "description": "MyStockAnalytics_queryset"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "9a4dba2a-26a8-493b-95c7-1485e07eb397"
+  }
+}
