@@ -1,20 +1,23 @@
 # Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+**TODO**: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project.  
+https://devpost.com/software/the-investment-project
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+# Inspiration
+I drew inspiration for this project/solution from real problems in the banking sector (e.g. Corporate & Investment banking), and from my latest applied skills.
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+# How to Build/Execute
+By using Microsoft Fabric Real-Time Intelligence, a solution/workload that's completely capable of streaming data to Fabric, driving decisions in real-time, etc.  
+**TODO**: Describe and show your code and how to run this project.
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+# What it does
+- Performs data analysis of the information into Fabric Real-Time Intelligence;  
+- Integrates data from various sources;  
+- All of this while making real-time decisions a reality`¹`.
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+`¹Based on the integrated data`
+
+# Challenges I ran into
+The transformation/real-time data processing, directly before the streaming data routing.
+
+# What I learned
+How to perform a deep analysis with KQL (Kusto Query Language), an effective tool to explore data, identify anomalies, discover patterns and more.
