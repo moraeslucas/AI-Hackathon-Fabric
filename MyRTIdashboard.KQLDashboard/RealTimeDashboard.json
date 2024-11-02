@@ -1,0 +1,94 @@
+{
+  "schema_version": "54",
+  "title": "MyRTIdashboard",
+  "tiles": [
+    {
+      "id": "da79c8bb-65a4-444c-ad2f-5139799684ff",
+      "title": "My RTI dashboard",
+      "visualType": "pie",
+      "pageId": "a0f43338-c092-4895-abf6-e778574fd2d0",
+      "layout": {
+        "width": 9,
+        "height": 7,
+        "x": 0,
+        "y": 0
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "d5378013-41bf-4cb8-b4be-96a695c95b3e"
+      },
+      "visualOptions": {
+        "hideLegend": true,
+        "legendLocation": "bottom",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "crossFilter": [],
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "labelDisabled": false,
+        "pie__label": [
+          "name",
+          "percentage"
+        ],
+        "tooltipDisabled": false,
+        "pie__tooltip": [
+          "name",
+          "percentage",
+          "value"
+        ],
+        "pie__orderBy": "size",
+        "pie__kind": "pie",
+        "pie__topNSlices": null,
+        "drillthrough": []
+      }
+    }
+  ],
+  "baseQueries": [],
+  "parameters": [
+    {
+      "kind": "duration",
+      "id": "db6d68ed-2fed-4a26-b3b0-8caf26f0206b",
+      "displayName": "Time range",
+      "description": "",
+      "beginVariableName": "_startTime",
+      "endVariableName": "_endTime",
+      "defaultValue": {
+        "kind": "dynamic",
+        "count": 1,
+        "unit": "hours"
+      },
+      "showOnPages": {
+        "kind": "all"
+      }
+    }
+  ],
+  "dataSources": [
+    {
+      "id": "04ab1b2c-48d5-47bd-8b00-b8d6b3b1040c",
+      "kind": "kusto-trident",
+      "scopeId": "kusto-trident",
+      "clusterUri": "https://trd-eb1zhqp5n67ywutaf3.z5.kusto.fabric.microsoft.com",
+      "database": "8d5efbac-a99e-47c6-9e74-e1157b763fc2",
+      "name": "MyStockAnalytics",
+      "workspace": "93bff834-ecfa-412c-9bcf-5a20647fb4bd"
+    }
+  ],
+  "pages": [
+    {
+      "name": "Page 1",
+      "id": "a0f43338-c092-4895-abf6-e778574fd2d0"
+    }
+  ],
+  "queries": [
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "04ab1b2c-48d5-47bd-8b00-b8d6b3b1040c"
+      },
+      "text": "// Uses a grouped rowcount by EventType.\nMyImportData\n| summarize MyRowCount = count() by MyEventType",
+      "id": "d5378013-41bf-4cb8-b4be-96a695c95b3e",
+      "usedVariables": []
+    }
+  ]
+}
