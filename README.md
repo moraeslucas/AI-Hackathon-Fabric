@@ -28,9 +28,21 @@ And here is how it should look like right before finishing:
 ![Inspect the Data](./media/InspectTheData.jpg =790x208)
 
 **2.0)** Then, analyse the imported data with a grouped rowcount. More precisely, with an overview for each Event Type as follows:  
-![Inspect the Data](./media/MyImport-Visual.gif)  
-**Obs.:** This dashboard and its associated KQL-queryset are inside the folders *MyRTIdashboard.KQLDashboard*, and *MyImport.KQLQueryset* respectively.
+![Inspect the Data](./media/MyImport-Visual.gif =400x299)  
+**Obs.:** This dashboard and its associated KQL-queryset are inside the folders *MyRTIdashboard.KQLDashboard*, and *MyImport.KQLQueryset* respectively.  
+<br>
 
+**3.0)** As the work continues on the investment project, another analysis in real-time should be carried out, this time even more complex as shown below.
+```csharp
+//This KQL-queryset creates a calculated column
+MyImportData 
+| where EventType == "IncomingRequest" 
+| extend MyNumberofDaysSinceEvent = datetime_diff('day', now(), MyTimestamp)
+```  
+<br>
+
+**4.0)** Now. it's time to do real-time data processing/transformation, so you can make real-time decisions a reality  
+<br>
 <br>
 
 ## What it does
@@ -40,9 +52,11 @@ And here is how it should look like right before finishing:
 
 `¹Based on the integrated data`  
 <br>
+<br>
 
 ## Challenges I ran into
 The transformation/real-time data processing, directly before the streaming data routing.  
+<br>
 <br>
 
 ## What I learned
