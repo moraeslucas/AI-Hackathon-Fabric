@@ -11,7 +11,7 @@ I drew inspiration for this project/solution from real problems in the banking s
 <br>
 
 ## How to Build/Test
-By using Microsoft Fabric Real-Time Intelligence workspace, a solution/workload that's completely capable of streaming data to Fabric, driving decisions in real-time, etc.  
+By using the Microsoft Fabric Real-Time Intelligence workspace, a solution/workload that's completely capable of streaming data to Fabric, driving decisions in real-time, etc.  
 
 Here is how you can make it work/test it:  
 **1.1)** Start by uploading the *MyImportData.csv* data into a KQL-database.
@@ -25,23 +25,28 @@ Here is how you can make it work/test it:
 | MyMessage   | String |
 
 And here is how it should look like right before finishing:  
-![Inspect the Data](./media/InspectTheData.jpg =790x208)
+![Inspect the Data](./media/InspectTheData.jpg =698x208)  
+<br>
 
-**2.0)** Then, analyse the imported data with a grouped rowcount. More precisely, with an overview for each Event Type as follows:  
-![Inspect the Data](./media/MyImport-Visual.gif =400x299)  
+**2.0)** Then, analyze the imported data with a grouped rowcount. More precisely, with an overview for each Event Type as follows:  
+![Inspect the Data](./media/MyImport-Visual.gif =350x262)  
 **Obs.:** This dashboard and its associated KQL-queryset are inside the folders *MyRTIdashboard.KQLDashboard*, and *MyImport.KQLQueryset* respectively.  
 <br>
 
 **3.0)** As the work continues on the investment project, another analysis in real-time should be carried out, this time even more complex as shown below.
 ```csharp
-//This KQL-queryset creates a calculated column
+//KQL-queryset (which creates a calculated column) enhanced by Copilot
 MyImportData 
 | where EventType == "IncomingRequest" 
 | extend MyNumberofDaysSinceEvent = datetime_diff('day', now(), MyTimestamp)
 ```  
 <br>
 
-**4.0)** Now. it's time to do real-time data processing/transformation, so you can make real-time decisions a reality  
+**4.0)** Now, it's time to process/transform streaming data, so you can make real-time decisions a reality  
+ &nbsp;&nbsp;&nbsp;**a)** Configure the Stock-Market dataset (which gives this Project's name) as the streaming source;  
+ <br>
+ &nbsp;&nbsp;&nbsp;**b)** After the transformations below, route this streaming data into the same KQL-database, thus integrating data from multiple sources.  
+&nbsp;&nbsp;&nbsp;![Inspect the Data](./media/EventProcessing.jpg =698x409)
 <br>
 <br>
 
@@ -50,12 +55,12 @@ MyImportData
 - Integrates data from various sources;  
 - All of this while making real-time decisions a reality`¹`.
 
-`¹Based on the integrated data`  
+`¹Based on the integrated data`
 <br>
 <br>
 
 ## Challenges I ran into
-The transformation/real-time data processing, directly before the streaming data routing.  
+The transformation/real-time data processing, directly before the streaming data routing.
 <br>
 <br>
 
