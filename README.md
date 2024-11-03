@@ -37,8 +37,10 @@ And here is how it should look like right before finishing:
 ```csharp
 //KQL-queryset (which creates a calculated column) enhanced by Copilot
 MyImportData 
-| where EventType == "IncomingRequest" 
-| extend MyNumberofDaysSinceEvent = datetime_diff('day', now(), MyTimestamp)
+| project MyEventType, MyMachine, MyTimestamp
+| where MyEventType in ("IncomingRequest", "PeriodicScan")
+| take 10000
+| extend MyNumberOfMinutesSince = datetime_diff('minute', now(), MyTimestamp)
 ```  
 <br>
 
