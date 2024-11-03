@@ -8,10 +8,10 @@
       "visualType": "pie",
       "pageId": "a0f43338-c092-4895-abf6-e778574fd2d0",
       "layout": {
-        "width": 9,
-        "height": 7,
         "x": 0,
-        "y": 0
+        "y": 0,
+        "width": 9,
+        "height": 7
       },
       "queryRef": {
         "kind": "query",
@@ -23,7 +23,6 @@
         "xColumn": null,
         "yColumns": null,
         "seriesColumns": null,
-        "crossFilter": [],
         "crossFilterDisabled": false,
         "drillthroughDisabled": false,
         "labelDisabled": false,
@@ -40,8 +39,26 @@
         "pie__orderBy": "size",
         "pie__kind": "pie",
         "pie__topNSlices": null,
+        "crossFilter": [],
         "drillthrough": []
       }
+    },
+    {
+      "id": "21815034-9730-4615-a0b5-d6fd69b07c18",
+      "title": "##############",
+      "visualType": "table",
+      "pageId": "a0f43338-c092-4895-abf6-e778574fd2d0",
+      "layout": {
+        "x": 9,
+        "y": 0,
+        "width": 9,
+        "height": 7
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "c439d08f-2f35-468f-9da3-3f71b82b4411"
+      },
+      "visualOptions": {}
     }
   ],
   "baseQueries": [],
@@ -88,6 +105,15 @@
       },
       "text": "// Uses a grouped rowcount by EventType.\nMyImportData\n| summarize MyRowCount = count() by MyEventType",
       "id": "d5378013-41bf-4cb8-b4be-96a695c95b3e",
+      "usedVariables": []
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "04ab1b2c-48d5-47bd-8b00-b8d6b3b1040c"
+      },
+      "text": "//KQL-queryset (which creates a calculated column) enhanced by Copilot\nMyImportData  \n| project MyEventType, MyMachine, MyTimestamp\n| where MyEventType in (\"IncomingRequest\", \"PeriodicScan\")\n| take 10000\n| extend MyNumberOfMinutesSince = datetime_diff('minute', now(), MyTimestamp)",
+      "id": "c439d08f-2f35-468f-9da3-3f71b82b4411",
       "usedVariables": []
     }
   ]
