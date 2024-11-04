@@ -31,7 +31,7 @@ And here is how it should look like right before finishing:
 <br>
 
 **2.0)** Then, analyze the imported data with a grouped rowcount. More precisely, with an overview for each Event Type as follows:   
-<img src="./media/MyImport-Visual.gif" width="350" height="262"/>  
+<img src="./media/MyImport-Visual.gif" />  
 **Obs.:** This dashboard and its associated KQL-queryset are inside the folders *MyRTIdashboard.KQLDashboard*, and *MyImport.KQLQueryset* respectively.  
 <br>
 
