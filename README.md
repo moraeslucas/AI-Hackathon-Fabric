@@ -1,9 +1,11 @@
 # The Investment Project
 This solution performs data analysis on the provided information by using Real-Time Intelligence on Microsoft Fabric, in addition to integrating data from various sources, while making real-time decisions a reality.  
-**This project is part of my Fabric and AI Hackathon that can be found here:*
+<br>
+**This project is part of my Fabric and AI Hackathon that can be found here:*  
 &nbsp;[<img src="./media/MyProjectLogo.png" width="97" height="25"/>](https://devpost.com/software/the-investment-project)
-&nbsp;[<img src="./media/MicrosoftLogo.png" width="90" height="19"/>](https://developer.microsoft.com/en-us/)
-&nbsp;[<img src="./media/FabricLogo.png" width="129" height="16"/>](https://www.microsoft.com/en-us/microsoft-fabric)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<img src="./media/MicrosoftLogo.png" width="90" height="19"/>](https://developer.microsoft.com/en-us/)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<img src="./media/FabricLogo.png" width="129" height="16"/>](https://www.microsoft.com/en-us/microsoft-fabric)  
+&nbsp;[<img src="./media/YoutubeVideo.jpg" />](https://youtu.be/NV-PGdXJI9o)  
 <br>
 
 ## Inspiration
@@ -25,7 +27,7 @@ Here is how you can make it work/test it:
 | MyMessage   | String |
 
 And here is how it should look like right before finishing:  
-<img src="./media/InspectTheData.jpg" width="698" height="208"/>  
+<img src="./media/InspectTheData.jpg" />  
 <br>
 
 **2.0)** Then, analyze the imported data with a grouped rowcount. More precisely, with an overview for each Event Type as follows:   
@@ -48,7 +50,7 @@ MyImportData
  &nbsp;&nbsp;&nbsp;**a)** Configure the Stock-Market dataset (which gives this Project's name) as the streaming source;  
  <br>
  &nbsp;&nbsp;&nbsp;**b)** After the transformations below, route this streaming data into the same KQL-database, thus integrating data from multiple sources.  
-&nbsp;&nbsp;&nbsp;<img src="./media/EventProcessing.jpg" width="685" height="402"/>  
+&nbsp;&nbsp;&nbsp;<img src="./media/EventProcessing.jpg" />  
 <br>
 
 ## What it does
