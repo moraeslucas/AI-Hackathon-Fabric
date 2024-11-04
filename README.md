@@ -1,9 +1,9 @@
 # The Investment Project
 This solution performs data analysis on the provided information by using Real-Time Intelligence on Microsoft Fabric, in addition to integrating data from various sources, while making real-time decisions a reality.  
 **This project is part of my Fabric and AI Hackathon that can be found here:*
-&nbsp;[![My Project](./media/MyProjectLogo.png =97x25)](https://devpost.com/software/the-investment-project)
-&nbsp;[![Microsoft Logo](./media/MicrosoftLogo.png =90x19)](https://developer.microsoft.com/en-us/)
-&nbsp;[![Fabric Logo](./media/FabricLogo.png =129x16)](https://www.microsoft.com/en-us/microsoft-fabric)  
+&nbsp;[<img src="./media/MyProjectLogo.png" width="97" height="25"/>](https://devpost.com/software/the-investment-project)
+&nbsp;[<img src="./media/MicrosoftLogo.png" width="90" height="19"/>](https://developer.microsoft.com/en-us/)
+&nbsp;[<img src="./media/FabricLogo.png" width="129" height="16"/>](https://www.microsoft.com/en-us/microsoft-fabric)  
 <br>
 
 ## Inspiration
@@ -25,16 +25,16 @@ Here is how you can make it work/test it:
 | MyMessage   | String |
 
 And here is how it should look like right before finishing:  
-![Inspect the Data](./media/InspectTheData.jpg =698x208)  
+<img src="./media/InspectTheData.jpg" width="698" height="208"/>  
 <br>
 
-**2.0)** Then, analyze the imported data with a grouped rowcount. More precisely, with an overview for each Event Type as follows:  
-![Inspect the Data](./media/MyImport-Visual.gif =350x262)  
+**2.0)** Then, analyze the imported data with a grouped rowcount. More precisely, with an overview for each Event Type as follows:   
+<img src="./media/MyImport-Visual.gif" width="350" height="262"/>  
 **Obs.:** This dashboard and its associated KQL-queryset are inside the folders *MyRTIdashboard.KQLDashboard*, and *MyImport.KQLQueryset* respectively.  
 <br>
 
 **3.0)** As the work continues on the investment project, another analysis in real-time should be carried out, this time even more complex as shown below.
-```csharp
+```kql
 //KQL-queryset (which creates a calculated column) enhanced by Copilot
 MyImportData 
 | project MyEventType, MyMachine, MyTimestamp
@@ -44,12 +44,11 @@ MyImportData
 ```  
 <br>
 
-**4.0)** Now, it's time to process/transform streaming data, so you can make real-time decisions a reality  
+**4.0)** Now, it's time to process/transform streaming data, so you can make real-time decisions a reality.  
  &nbsp;&nbsp;&nbsp;**a)** Configure the Stock-Market dataset (which gives this Project's name) as the streaming source;  
  <br>
  &nbsp;&nbsp;&nbsp;**b)** After the transformations below, route this streaming data into the same KQL-database, thus integrating data from multiple sources.  
-&nbsp;&nbsp;&nbsp;![Inspect the Data](./media/EventProcessing.jpg =698x409)
-<br>
+&nbsp;&nbsp;&nbsp;<img src="./media/EventProcessing.jpg" width="685" height="402"/>  
 <br>
 
 ## What it does
